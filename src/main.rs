@@ -31,7 +31,8 @@ fn main() {
     println!("Input 2 For Multiplication");
     println!("Input 3 For Division");
     println!("Input 4 For Mod");
-    println!("Input 5 to calculate the slope of 2 points");
+    println!("Input 5 for Exponents");
+    println!("Input 6 to calculate the slope of 2 points");
 
 
 
@@ -68,7 +69,59 @@ fn main() {
         println!("Your Number is {}", a % b);
     }
 
-    if x == 5 {
+    if x == 5{
+        println!("You have choosen Exponents");
+        println!("This is positive only, with any base and exponents to 1-10");
+
+        let mut base = String::new();
+        let mut exponent = String::new();
+
+        println!("Please Input Your Base value");
+        io::stdin()
+        .read_line(&mut base)
+        .expect("Failed to read line");
+        let base: i32 = base.trim().parse().ok().expect("Input not an integer");
+
+        println!("Please Input Your Exponent value");
+        io::stdin()
+        .read_line(&mut exponent)
+        .expect("Failed to read line");
+        let exponent: i32 = exponent.trim().parse().ok().expect("Input not an integer");
+
+        if exponent == 1{
+            println!("Your number is {}", 1 * base);
+        }
+        if exponent == 2{
+            println!("Your number is {}", base * base);
+        }
+        if exponent == 3{
+            println!("Your number is {}", base * base * base);
+        }
+        if exponent == 4{
+            println!("Your number is {}", base * base * base * base);
+        }
+        if exponent == 5{
+            println!("Your number is {}", base * base * base * base * base);
+        }
+        if exponent == 6{
+            println!("Your number is {}", base * base * base * base * base * base);
+        }
+        if exponent == 7{
+            println!("Your number is {}", base * base * base * base * base * base * base);
+        }
+        if exponent == 8{
+            println!("Your number is {}", base * base * base * base * base * base * base * base);
+        }
+        if exponent == 9{
+            println!("Your number is {}", base * base * base * base * base * base * base * base * base);
+        }
+        if exponent == 10{
+            println!("Your number is {}", base * base * base * base * base * base * base * base * base * base);
+        }
+
+    }
+
+    if x == 6 {
         println!("You Have choosen Slope");
        
         
