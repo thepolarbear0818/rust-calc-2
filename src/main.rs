@@ -71,8 +71,7 @@ fn main() {
 
     if x == 5{
         println!("You have choosen Exponents");
-        println!("This is positive only, with any base and exponents to 1-10");
-
+        
         let mut base = String::new();
         let mut exponent = String::new();
 
@@ -88,36 +87,10 @@ fn main() {
         .expect("Failed to read line");
         let exponent: i32 = exponent.trim().parse().ok().expect("Input not an integer");
 
-        if exponent == 1{
-            println!("Your number is {}", 1 * base);
-        }
-        if exponent == 2{
-            println!("Your number is {}", base * base);
-        }
-        if exponent == 3{
-            println!("Your number is {}", base * base * base);
-        }
-        if exponent == 4{
-            println!("Your number is {}", base * base * base * base);
-        }
-        if exponent == 5{
-            println!("Your number is {}", base * base * base * base * base);
-        }
-        if exponent == 6{
-            println!("Your number is {}", base * base * base * base * base * base);
-        }
-        if exponent == 7{
-            println!("Your number is {}", base * base * base * base * base * base * base);
-        }
-        if exponent == 8{
-            println!("Your number is {}", base * base * base * base * base * base * base * base);
-        }
-        if exponent == 9{
-            println!("Your number is {}", base * base * base * base * base * base * base * base * base);
-        }
-        if exponent == 10{
-            println!("Your number is {}", base * base * base * base * base * base * base * base * base * base);
-        }
+        let base = i32::pow(base,exponent.try_into().unwrap());
+
+        println!("{}",base)
+
 
     }
 

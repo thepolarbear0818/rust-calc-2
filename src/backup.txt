@@ -1,0 +1,21 @@
+        println!("You have choosen Exponents");
+        println!("This is positive only, with any base and exponents to 1-10");
+
+        let mut base = String::new();
+        let mut exponent = String::new();
+
+        println!("Please Input Your Base value");
+        io::stdin()
+        .read_line(&mut base)
+        .expect("Failed to read line");
+        let base: i32 = base.trim().parse().ok().expect("Input not an integer");
+
+        println!("Please Input Your Exponent value");
+        io::stdin()
+        .read_line(&mut exponent)
+        .expect("Failed to read line");
+        let exponent: i32 = exponent.trim().parse().ok().expect("Input not an integer");
+
+        let base = i32::pow(base,exponent.try_into().unwrap());
+
+        println!("{}",base)
